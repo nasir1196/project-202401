@@ -4,16 +4,24 @@ import Container from "../Container";
 import Link from "next/link";
 import { MdFacebook } from "react-icons/md";
 import FooterList from "./FooterList";
+import bKash from "../../../public/payment/bKash.png";
+import bank from "../../../public/payment/bank.png";
+import mastercard from "../../../public/payment/mastercard.png";
+import nagad from "../../../public/payment/nagad.png";
+import onlinebank from "../../../public/payment/onlinebank.png";
+import visa from "../../../public/payment/visa.png";
+
 import {
   AiFillTwitterCircle,
   AiFillYoutube,
   AiFillGithub,
   AiFillLinkedin,
 } from "react-icons/ai";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <motion.footer className="bg-slate-700 text-slate-200 text-sm mt-16 sm:mx-10">
+    <motion.footer className="bg-slate-700 text-slate-200 text-sm mt-16 sm:mx-10 md:mx-2 lg:mx-0">
       <Container>
         <motion.div className="flex flex-col md:flex-row justify-between pt-16 pb-8">
           <FooterList>
@@ -175,19 +183,53 @@ const Footer = () => {
                   delay: 0.3,
                 }}
               >
-                About
+                Payment Gateway
               </motion.h3>
-              <motion.div className="cursor-pointer">
-                <motion.p
+              <motion.div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <motion.div
                   initial={{ scale: 0.85 }}
                   transition={{ duration: 0.4 }}
                   whileHover={{ scale: 1, color: "#02949b" }}
                 >
-                  At our electronics store, we are dedicated to providing the
-                  latest and greatest devices and accessories to our customers.
-                  With a wide selection of phones, TVs, laptops, watches, and
-                  accessories.
-                </motion.p>
+                  <Image src={bKash} alt="gateway" className="bg-slate-50" />
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0.85 }}
+                  transition={{ duration: 0.4 }}
+                  whileHover={{ scale: 1, color: "#02949b" }}
+                >
+                  <Image src={bank} alt="gateway" />
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0.85 }}
+                  transition={{ duration: 0.4 }}
+                  whileHover={{ scale: 1, color: "#02949b" }}
+                >
+                  <Image src={mastercard} alt="gateway" />
+                </motion.div>
+              </motion.div>
+              <motion.div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <motion.div
+                  initial={{ scale: 0.85 }}
+                  transition={{ duration: 0.4 }}
+                  whileHover={{ scale: 1, color: "#02949b" }}
+                >
+                  <Image src={nagad} alt="gateway"/>
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0.85 }}
+                  transition={{ duration: 0.4 }}
+                  whileHover={{ scale: 1, color: "#02949b" }}
+                >
+                  <Image src={onlinebank} alt="gateway"/>
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0.85 }}
+                  transition={{ duration: 0.4 }}
+                  whileHover={{ scale: 1, color: "#02949b" }}
+                >
+                  <Image src={visa} alt="gateway"/>
+                </motion.div>
               </motion.div>
             </motion.div>
           </FooterList>

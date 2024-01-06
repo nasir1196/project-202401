@@ -19,7 +19,7 @@ const Navbar = () => {
                                 transition={{ duration: 0.7 }}
                                 whileHover={{ scale: 1.2, color: "#002207fc" }}>
                                 <Link href="/" className={`${redressed.className} font-bold text-2xl`}>
-                                    Next-Shop
+                                    2ABBU
                                 </Link>
                             </motion.div>
                             <div className="hidden md:block">Search</div>
