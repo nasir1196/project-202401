@@ -1,10 +1,22 @@
+import Container from "../components/Container";
+import Banner from "../components/banner/Banner";
+import Catagories from "../components/catagories/Catagories";
+import OfferBanner from "../components/offerBanner/OfferBanner";
 
 export default function Home() {
-    return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-          Hridoy Khan...
+  return (
+    <div className="p-8">
+      <Container>
+        <div>
+          <OfferBanner />
         </div>
-      </main>
-    )
-  }
+        <div>
+          <Banner />
+        </div>
+        <div>
+          <Catagories />
+        </div>
+      </Container>
+    </div>
+  );
+}

@@ -49,7 +49,7 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.2, color: "#02949b" }}
               >
-                Phones
+                Shirt
               </motion.div>
             </Link>
             <Link href="#">
@@ -58,7 +58,7 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.2, color: "#02949b" }}
               >
-                Laptops
+                Pants
               </motion.div>
             </Link>
             <Link href="#">
@@ -67,7 +67,7 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.2, color: "#02949b" }}
               >
-                Desktops
+                Polo T-Shirt
               </motion.div>
             </Link>
             <Link href="#">
@@ -76,7 +76,7 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.2, color: "#02949b" }}
               >
-                Watches
+                T-Shirt
               </motion.div>
             </Link>
             <Link href="#">
@@ -85,7 +85,7 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.2, color: "#02949b" }}
               >
-                TVs
+                Panjabi
               </motion.div>
             </Link>
             <Link href="#">
@@ -94,7 +94,7 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.2, color: "#02949b" }}
               >
-                Accessories
+                More Products
               </motion.div>
             </Link>
           </FooterList>
@@ -124,7 +124,7 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.2, color: "#02949b" }}
               >
-                Contact Us
+                Online Payment
               </motion.div>
             </Link>
             <Link href="#">
@@ -151,7 +151,7 @@ const Footer = () => {
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.2, color: "#02949b" }}
               >
-                Watches
+                Cash On Delivery
               </motion.div>
             </Link>
             <Link href="condition">
@@ -185,52 +185,6 @@ const Footer = () => {
               >
                 Payment Gateway
               </motion.h3>
-              <motion.div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <motion.div
-                  initial={{ scale: 0.85 }}
-                  transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1, color: "#02949b" }}
-                >
-                  <Image src={bKash} alt="gateway" className="bg-slate-50" />
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0.85 }}
-                  transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1, color: "#02949b" }}
-                >
-                  <Image src={bank} alt="gateway" />
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0.85 }}
-                  transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1, color: "#02949b" }}
-                >
-                  <Image src={mastercard} alt="gateway" />
-                </motion.div>
-              </motion.div>
-              <motion.div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                <motion.div
-                  initial={{ scale: 0.85 }}
-                  transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1, color: "#02949b" }}
-                >
-                  <Image src={nagad} alt="gateway"/>
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0.85 }}
-                  transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1, color: "#02949b" }}
-                >
-                  <Image src={onlinebank} alt="gateway"/>
-                </motion.div>
-                <motion.div
-                  initial={{ scale: 0.85 }}
-                  transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1, color: "#02949b" }}
-                >
-                  <Image src={visa} alt="gateway"/>
-                </motion.div>
-              </motion.div>
             </motion.div>
           </FooterList>
 
@@ -364,6 +318,48 @@ const Footer = () => {
           </FooterList>
         </motion.div>
       </Container>
+
+      <Container>
+        <motion.div className="cursor-pointer grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 px-1 md:px-2 lg:px-5">
+          <motion.div>
+            <Image
+              src={bKash}
+              alt="gateway"
+              className="block h-32 w-36 object-contain"
+            />
+          </motion.div>
+          <motion.div>
+            <Image
+              src={bank}
+              alt="gateway"
+              className="block h-32 w-36 object-contain"
+            />
+          </motion.div>
+          
+
+          <motion.div>
+            <Image
+              src={nagad}
+              alt="gateway"
+              className="block h-32 w-36 object-contain"
+            />
+          </motion.div>
+          <motion.div>
+            <Image
+              src={onlinebank}
+              alt="gateway"
+              className="block h-32 w-36 object-contain"
+            />
+          </motion.div>
+          <motion.div>
+            <Image
+              src={visa}
+              alt="gateway"
+              className="block h-32 w-36 object-contain"
+            />
+          </motion.div>
+        </motion.div>
+        </Container>
 
       <motion.footer>
         <motion.p
