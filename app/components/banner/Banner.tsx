@@ -38,16 +38,15 @@ const Banner = () => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col h-full w-full items-center justify-center">
-              <h1 className="text-3xl text-teal-600 font-bold text-center pt-10 pb-2">
-                {image.title}
-              </h1>
-              <Image
-                src={image.image}
-                alt={image.alt}
-                className="block h-full w-full object-cover"
-              />
+          <div className="position-image">
+            <Image src={image.image} alt="img"/>
+            <div className="main-image">
+              <h2> {
+              image.title
+             }</h2>
+            
             </div>
+          </div>
           </SwiperSlide>
         ))}
       </Swiper>
