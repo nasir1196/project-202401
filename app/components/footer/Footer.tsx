@@ -21,14 +21,14 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <motion.footer className="bg-slate-700 text-slate-200 text-sm mt-16 sm:mx-10 md:mx-2 lg:mx-0">
+    <motion.footer className="footer bg-black text-slate-200 text-sm mt-16 sm:mx-10 md:mx-2 lg:mx-0">
       <Container>
         <motion.div className="flex flex-col md:flex-row justify-between pt-16 pb-8">
           <FooterList>
             <motion.h3
               initial={{
                 opacity: 0.9,
-                color: "#02949b",
+                color: "white",
                 fontWeight: "bold",
               }}
               animate={{
@@ -47,7 +47,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 Shirt
               </motion.div>
@@ -56,7 +56,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 Pants
               </motion.div>
@@ -65,7 +65,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 Polo T-Shirt
               </motion.div>
@@ -74,7 +74,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 T-Shirt
               </motion.div>
@@ -83,7 +83,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 Panjabi
               </motion.div>
@@ -92,7 +92,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 More Products
               </motion.div>
@@ -103,7 +103,7 @@ const Footer = () => {
             <motion.h3
               initial={{
                 opacity: 0.9,
-                color: "#02949b",
+                color: "white",
                 fontWeight: "bold",
               }}
               animate={{
@@ -122,7 +122,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 Online Payment
               </motion.div>
@@ -131,7 +131,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 Shopping Policy
               </motion.div>
@@ -140,7 +140,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 Return & Exchange
               </motion.div>
@@ -149,7 +149,7 @@ const Footer = () => {
               <motion.div
                 initial={{ scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                whileHover={{ scale: 1.2, color: "#02949b" }}
+                whileHover={{ scale: 1.2, color: "white" }}
               >
                 Cash On Delivery
               </motion.div>
@@ -170,7 +170,7 @@ const Footer = () => {
               <motion.h3
                 initial={{
                   opacity: 0.9,
-                  color: "#02949b",
+                  color: "white",
                   fontWeight: "bold",
                 }}
                 animate={{
@@ -185,6 +185,16 @@ const Footer = () => {
               >
                 Payment Gateway
               </motion.h3>
+              <div className="footer-parent">
+                   <Image src={bKash} alt="" />
+                   <Image src={bank} alt="" />
+                   <Image src={nagad} alt="" />
+                   <Image src={onlinebank} alt="" />
+                   <Image src={visa} alt="" />
+                   <Image src={mastercard} alt="" />
+
+
+              </div>
             </motion.div>
           </FooterList>
 
@@ -192,7 +202,7 @@ const Footer = () => {
             <motion.h3
               initial={{
                 opacity: 0.9,
-                color: "#02949b",
+                color: "white",
                 fontWeight: "bold",
               }}
               animate={{
@@ -210,10 +220,10 @@ const Footer = () => {
             <motion.div className="flex gap-2">
               <Link href="https://www.facebook.com/NT1196" target="_blank">
                 <motion.div
-                  className="cursor-pointer md:py-5 py-0 text-center"
+                  className="cursor-pointer md:py-2 py-0 text-center"
                   initial={{ x: 0 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "red" }}
+                  whileHover={{ scale: 1.2, color: "#767676" }}
                 >
                   <MdFacebook size={24} />
                 </motion.div>
@@ -221,10 +231,10 @@ const Footer = () => {
 
               <Link href="https://www.twitter.com/nasir1196" target="_blank">
                 <motion.div
-                  className="cursor-pointer md:py-5 py-0 text-center"
+                  className="cursor-pointer md:py-2 py-0 text-center"
                   initial={{ x: 0 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "red" }}
+                  whileHover={{ scale: 1.2, color: "#767676" }}
                 >
                   <AiFillTwitterCircle size={24} />
                 </motion.div>
@@ -235,10 +245,10 @@ const Footer = () => {
                 target="_blank"
               >
                 <motion.div
-                  className="cursor-pointer md:py-5 py-0 text-center"
+                  className="cursor-pointer md:py-2 py-0 text-center"
                   initial={{ x: 0 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "red" }}
+                  whileHover={{ scale: 1.2, color: "#767676" }}
                 >
                   <AiFillLinkedin size={24} />
                 </motion.div>
@@ -246,10 +256,10 @@ const Footer = () => {
 
               <Link href="https://github.com/nasir1196" target="_blank">
                 <motion.div
-                  className="cursor-pointer md:py-5 py-0 text-center"
+                  className="cursor-pointer md:py-2 py-0 text-center"
                   initial={{ x: 0 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "red" }}
+                  whileHover={{ scale: 1.2, color: "#767676" }}
                 >
                   <AiFillGithub size={24} />
                 </motion.div>
@@ -260,22 +270,22 @@ const Footer = () => {
                 target="_blank"
               >
                 <motion.div
-                  className="cursor-pointer md:py-5 py-0 text-center"
+                  className="cursor-pointer md:py-2 py-0 text-center"
                   initial={{ x: 0 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "red" }}
+                  whileHover={{ scale: 1.2, color: "#767676" }}
                 >
                   <AiFillYoutube size={24} />
                 </motion.div>
               </Link>
             </motion.div>
 
-            <motion.div className="flex md:flex-row sm:flex-col md:gap-3 gap-0 my-4">
+            <motion.div className="flex md:flex-row sm:flex-col md:gap-3 gap-0 my-2">
               <Link href="/about">
                 <motion.div
                   initial={{ scale: 0.95 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "#02949b" }}
+                  whileHover={{ scale: 1.2, color: "white" }}
                 >
                   {" "}
                   About
@@ -285,7 +295,7 @@ const Footer = () => {
                 <motion.div
                   initial={{ scale: 0.95 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "#02949b" }}
+                  whileHover={{ scale: 1.2, color: "white" }}
                 >
                   {" "}
                   Contact
@@ -293,12 +303,12 @@ const Footer = () => {
               </Link>
             </motion.div>
 
-            <motion.div className="flex md:flex-row sm:flex-col md:gap-3 gap-0 my-2">
+            <motion.div className="flex md:flex-row sm:flex-col md:gap-1 gap-0 my-2">
               <Link href="disclaimer">
                 <motion.div
                   initial={{ scale: 0.95 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "#02949b" }}
+                  whileHover={{ scale: 1.2, color: "white" }}
                 >
                   {" "}
                   Disclaimer
@@ -309,7 +319,7 @@ const Footer = () => {
                 <motion.div
                   initial={{ scale: 0.95 }}
                   transition={{ duration: 0.4 }}
-                  whileHover={{ scale: 1.2, color: "#02949b" }}
+                  whileHover={{ scale: 1.2, color: "white" }}
                 >
                   Privacy Policy
                 </motion.div>
@@ -319,54 +329,13 @@ const Footer = () => {
         </motion.div>
       </Container>
 
-      <Container>
-        <motion.div className="cursor-pointer grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 px-1 md:px-2 lg:px-5">
-          <motion.div>
-            <Image
-              src={bKash}
-              alt="gateway"
-              className="block h-32 w-36 object-contain"
-            />
-          </motion.div>
-          <motion.div>
-            <Image
-              src={bank}
-              alt="gateway"
-              className="block h-32 w-36 object-contain"
-            />
-          </motion.div>
-          
 
-          <motion.div>
-            <Image
-              src={nagad}
-              alt="gateway"
-              className="block h-32 w-36 object-contain"
-            />
-          </motion.div>
-          <motion.div>
-            <Image
-              src={onlinebank}
-              alt="gateway"
-              className="block h-32 w-36 object-contain"
-            />
-          </motion.div>
-          <motion.div>
-            <Image
-              src={visa}
-              alt="gateway"
-              className="block h-32 w-36 object-contain"
-            />
-          </motion.div>
-        </motion.div>
-        </Container>
-
-      <motion.footer>
+      <motion.footer className="end-text">
         <motion.p
           className="cursor-pointer md:py-5 py-0 text-center"
           initial={{ x: 0 }}
           transition={{ duration: 0.4 }}
-          whileHover={{ color: "#02949b" }}
+          whileHover={{ color: "white" }}
         >
           &copy; {new Date().getFullYear()} - 2ABBU All rights reserved.
         </motion.p>
