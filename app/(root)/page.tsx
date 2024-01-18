@@ -1,7 +1,8 @@
-import Container from "../components/Container";
-import Banner from "../components/banner/Banner";
-import Catagories from "../components/catagories/Catagories";
-import OfferBanner from "../components/offerBanner/OfferBanner";
+import Container from "../components/Container"; 
+import Banner from "../components/banner/Banner"; 
+import OfferBanner from "../components/offerBanner/OfferBanner"; 
+import ProductContainer from "../components/productsFetcher/ProductContainer";
+
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
           <Banner />
         </div>
         <div>
-          <Catagories />
+          <ProductContainer />
         </div>
       </Container>
     </div>

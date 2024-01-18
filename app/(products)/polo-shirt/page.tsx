@@ -1,9 +1,11 @@
+import PoloShirtItem from "./poloShirtItem";
+
 
   
   const PoloShirt = () => {
     return (
       <div>
-       polo shirt
+       <PoloShirtItem/>
       </div>
     );
   };

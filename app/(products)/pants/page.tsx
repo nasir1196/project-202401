@@ -1,9 +1,10 @@
 
+import PantsItem from './PantsItem';
   
   const Pants = () => {
     return (
       <div>
-        pent
+        <PantsItem/>
       </div>
     );
   };
