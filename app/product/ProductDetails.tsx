@@ -8,6 +8,7 @@ import SelectColor from "@/app/components/productsFetcher/SelectColor";
 import SetQuantity from "../components/productsFetcher/SetQuantity";
 import ReuseButton from "../components/ReuseButton";
 import ProductImages from "../components/productsFetcher/ProductImages";
+import { useCart } from "@/hooks/useCart";
 
 interface ProductDetailsProps {
   products: any;
@@ -42,6 +43,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
   products,
   productId,
 }) => {
+  const {cartTotalQty}= useCart()
   const pDetails = products.filter((pd: any) => pd.id === productId.productId);
   const product = pDetails[0];
   const [cartProduct, setCartProduct] = useState<CartProductType>({
