@@ -20,13 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className} suppressHydrationWarning={true}>
-        <CartProvider>
+        
           <div className="flex flex-col min-h-screen">
             <Navbar />
             <main className="flex-grow">{children}</main>
             <Footer />
           </div>
-        </CartProvider>
+        
       </body>
     </html>
   );
