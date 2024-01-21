@@ -22,7 +22,6 @@ const ProductImages: React.FC<ProductImagesProps> = ({ cartProduct, product, han
                                 fill
                                 className="object-contain"
                             />
-                            hi
                         </div>
                     )
                 })}</div>

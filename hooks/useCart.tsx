@@ -1,10 +1,11 @@
 import { CartProductType } from "@/app/product/ProductDetails";
-import { createContext, useContext, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 interface CartContextType {
     cartTotalQty: number,
-    // cartProducts:CartProductType[] | null;
-    // handleAddProductToCart:(product:CartProductType)=>void
+    cartProducts: CartProductType[] | null;
+    handleAddProductToCart: (product: CartProductType) => void
 }
 interface Props {
     [propName: string]: any
@@ -14,12 +15,35 @@ export const CartContext = createContext<CartContextType | null>(null);
 
 export const CartContextProvider = (props: Props) => {
     const [cartTotalQty, setCartTotalQty] = useState(0)
-    // const [cartProducts, setCartProducts] = useState<CartProductType[]| null>(null)
-
-    const value = { cartTotalQty }
+    const [cartProducts, setCartProducts] = useState<CartProductType[] | null>(null)
 
 
-    return <CartContext.Provider value={value} />
+
+    useEffect(() => {
+        const cartItem: any = localStorage.getItem("2AbbuCartItems")
+        const cProducts: CartProductType[] | null = JSON.parse(cartItem)
+        setCartProducts(cProducts)
+    }, [])
+
+    const handleAddProductToCart = useCallback((product: CartProductType) => {
+        setCartProducts((prev) => {
+            let updatedCart;
+
+            if (prev) {
+                updatedCart = [...prev, product]
+            } else {
+                updatedCart = [product]
+            }
+            toast.success("Product added to Cart")
+            localStorage.setItem("2AbbuCartItems", JSON.stringify(updatedCart))
+            return updatedCart;
+        })
+    }, [])
+
+    const value = { cartTotalQty, cartProducts, handleAddProductToCart }
+
+
+    return <CartContext.Provider value={value} {...props} />
 }
 
 export const useCart = () => {
