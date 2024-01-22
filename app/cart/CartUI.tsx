@@ -5,12 +5,15 @@ import Link from "next/link";
 import { MdArrowBack } from "react-icons/md";
 import Heading from "../components/productsFetcher/Heading";
 import ReuseButton from "../components/ReuseButton";
+import ItemContent from "./ItemContent";
+import { formatPrice } from '@/utils/formatPrice';
 
 
 const CartUI = () => {
-    const { cartProducts } = useCart()
+    const { cartProducts, handleClearCart, totalCartAmount } = useCart()
 
-    if (cartProducts || cartProducts.length === 0) {
+
+    if (cartProducts === null) {
         return (
             <div className="flex flex-col items-center">
                 <div className="text-2xl">
@@ -36,23 +39,21 @@ const CartUI = () => {
             </div>
             <div>
                 {
-                    cartProducts && cartProducts?.map((item: any) => {
+                    cartProducts && cartProducts.map((item: any) => {
                         return (
-                            <div key={item.id}>
-                                {item.name}
-                            </div>
+                            <ItemContent key={item.id} item={item} />
                         )
                     })
                 }
             </div>
             <div className="border-t-[1.5px] border-slate-300 py-4 flex justify-between gap-4">
                 <div className="w-[90px]">
-                    <ReuseButton label="clear Cart" small outline onClick={() => { }} />
+                    <ReuseButton label="clear Cart" small outline onClick={() => handleClearCart()} />
                 </div>
                 <div className="text-sm flex flex-col gap-1 items-start">
                     <div className="flex justify-between w-full text-base font-semibold">
                         <span>Subtotal</span>
-                        <span>$1000</span>
+                        <span>{formatPrice(totalCartAmount)}</span>
                     </div>
                     <p className="text-slate-500">Tax free and shipping calculate at checkout</p>
                     <ReuseButton label="Checkout" onClick={() => { }} />

@@ -3,9 +3,9 @@ import Container from "../Container"
 import Link from "next/link"
 import { Redressed } from "next/font/google"
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCartShopping } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineMenuOpen } from "react-icons/md";
+import CartCount from "./CartCount";
 const redressed = Redressed({ subsets: ["latin"], weight: ["400"] })
 
 const Navbar = () => {
@@ -26,16 +26,15 @@ const Navbar = () => {
               </motion.div>
               <div className="hidden md:block">Search</div>
               <div className="flex items-center gap-8 md:gap-12">
-                  <Link href={'/cart'}>
-                  <FaCartShopping size={24}/>
-                  </Link>
-                  <Link href={'/profile'}>
-                  <FaUserCircle size={24}/>
-                  </Link>
-                  <div className="block md:hidden lg:hidden xl:hidden">
-                    
-                  <MdOutlineMenuOpen size={24}/>
-                  </div>
+                <CartCount />
+
+                <Link href={'/profile'}>
+                  <FaUserCircle size={24} />
+                </Link>
+                <div className="block md:hidden lg:hidden xl:hidden">
+
+                  <MdOutlineMenuOpen size={24} />
+                </div>
               </div>
             </motion.div>
 

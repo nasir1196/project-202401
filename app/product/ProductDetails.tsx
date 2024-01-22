@@ -11,6 +11,7 @@ import ProductImages from "../components/productsFetcher/ProductImages";
 import { useCart } from "@/hooks/useCart";
 import { MdCheckCircle } from "react-icons/md";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 interface ProductDetailsProps {
   product: any;
@@ -66,8 +67,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
       if (existingIndex > -1) {
         setIsProductInCart(true)
       }
-
-
     }
   }, [cartProducts])
 
@@ -85,11 +84,11 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
   );
 
   const handleQtyIncrease = useCallback(() => {
-    if (cartProduct.quantity === 99) {
-      return;
+    if (cartProduct.quantity === 10) {
+      return toast.error("Oops! Maximum reached")
     }
     setCartProduct((prev) => {
-      return { ...prev, quantity: prev.quantity + 1 };
+      return { ...prev, quantity:  prev.quantity++  };
     });
   }, [cartProduct]);
 
@@ -98,7 +97,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
       return;
     }
     setCartProduct((prev) => {
-      return { ...prev, quantity: prev.quantity - 1 };
+      return { ...prev, quantity: prev.quantity-- };
     });
   }, [cartProduct]);
   return (

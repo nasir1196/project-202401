@@ -1,13 +1,15 @@
 import ProductDetails from "../ProductDetails";
-import { product } from "@/utils/product"; 
 import Container from "@/app/components/Container";
 import ListRating from "../ListRating";
+import { products } from "@/utils/fakeData";
 
 interface IParams {
   productId?: string;
 }
 
 const Product = ({ params }: { params: IParams }) => {
+
+  const product = products.find((pd) => pd.id === params.productId)
   return (
     <div className="mt-10">
       <Container>

@@ -80,7 +80,7 @@ export const products = [
     images: [
       {
         color: "BlackShirt",
-        colorCode: "#000000",
+        colorCode: "#00000",
         image: BlackShirt,
       },
       {
@@ -124,12 +124,12 @@ export const products = [
     images: [
       {
         color: "pent",
-        colorCode: "#000000",
+        colorCode: "#00040",
         image: pent,
       },
       {
         color: "poloShirt",
-        colorCode: "#000000",
+        colorCode: "#000500",
         image: poloShirt,
       },
     ],
@@ -212,7 +212,7 @@ export const products = [
     images: [
       {
         color: "tShirt",
-        colorCode: "#000000",
+        colorCode: "#000060",
         image: tShirt,
       },
       {
