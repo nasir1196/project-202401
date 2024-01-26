@@ -1,11 +1,15 @@
+import Container from "@/app/components/Container";
+import FormWrap from "@/app/components/productsFetcher/FormWrap";
+import RegisterForm from "./RegisterForm";
 
 
 const RegisterPage = () => {
   return (
-    <div className="flex flex-col items-center h-full justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
-      
-      
-    </div>
+    <Container>
+      <FormWrap>
+        <RegisterForm />
+      </FormWrap>
+    </Container> >
   );
 };
 
